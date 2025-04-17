@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: linear-gradient(to right, rgb(176, 206, 229), rgb(115, 162, 209), rgb(96, 155, 214));
+      }
+      .all {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      .nav-bar {
+        position: fixed;
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(4, 5, 68);
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        font-family: "Arial Narrow Bold", sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        z-index: 1000;
+      }
+      .nav-bar div{
+        margin-right: 37px;
+      }
+      .nav-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+      }
+      .nav-links a {
+        color: rgb(138, 193, 232);
+        text-decoration: none;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(138, 193, 232);
+        margin: 4px 30px;
+      }
+      #toggle {
+        display: none;
+      }
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      section {
+        /* border: 1px solid rgba(255, 255, 255, 0.2); */
+        backdrop-filter: blur(80px);
+        padding: 50px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(40px);
+        border-radius: 15px;
+        box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.3);
+        width: 60%;
+        max-width: 800px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 200px;
+        scroll-margin-top: 80px;
+      }
+      h2 {
+        margin-bottom: 20px;
+        color: rgb(4, 5, 68);
+        font-family: "Arial Narrow Bold", sans-serif;
+        font-size: 40px;
+        font-weight: 900;
+        text-align: center;
+      }
+      section p {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20px;
+        color: rgb(36, 32, 67);
+      }
+      strong {
+        font-size: larger;
+        color: rgb(4, 5, 68);
+      }
+      li {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        color: rgb(4, 5, 68);
+        list-style-type:square;
+      }
+      @media (max-width: 600px) {
+        .nav-bar {
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+          font-weight: 200;
+          justify-content: flex-end;
+          padding: 10px 15px;
+          font-size: 6vw;
+        }
+        h2 {
+          font-size: 6.5vw;
+        }
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: fixed;
+          top: 50px;
+          right: 15px;
+          width: auto;
+          background-color: rgb(4, 5, 68);
+          padding: 15px;
+          z-index: 1000;
+          gap: 15px;
+        }
+        .hamburger {
+          display: flex;
+          align-self: end;
+          margin-right: 0;
+        }
+        #toggle:checked ~ .nav-links {
+          font-size: 6vw;
+          display: flex;
+          margin-right: -15px;
+        }
+        section {
+          margin-top: 100px ;
+          margin-bottom: 100px;
+          padding: 25px;
+          width: 80%;
+          line-height: 22px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">
+      <header class="nav-bar">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+        <div class="nav-links">
+          <a href="#about-me"><div>About Me</div></a>
+          <a href="#education"><div>Education</div></a>
+          <a href="#skills"><div>Skills</div></a>
+        </div>
+      </header>
+      <main>
+        <section id="about-me">
+          <h2>About Me</h2>
+          <p>
+            I am a dedicated and self-motivated individual with a strong passion
+            for technology, problem-solving, and continuous learning. Currently
+            pursuing my education in computer science, I have gained hands-on
+            experience in web development, coding contests, and innovative
+            projects. I believe in exploring life beyond academics, networking
+            with like-minded individuals, and contributing to meaningful projects
+            that create an impact. With a keen interest in software development,
+            I strive to enhance my skills and work on projects that challenge my
+            problem-solving abilities.
+          </p>
+        </section>
+
+        <section id="education">
+          <h2>Education</h2>
+          <ul>
+            <li>
+              <strong>Dharmsinh Desai University</strong> <br />B.Tech in
+              Information Technology | 2024 - 2028 <br />Relevant Courses: Web
+              Development, C, C++
+            </li>
+            <li>
+              <strong>New English School</strong> <br />Higher Secondary
+              Education | 2024 <br />Subjects: Mathematics, Physics, Computer
+              Science
+            </li>
+          </ul>
+        </section>
+
+        <section id="skills">
+          <h2>Skills</h2>
+          <p>
+            Over time, I have acquired a diverse set of technical and soft skills
+            that help me in solving real-world problems efficiently. My core
+            competencies include:
+          </p>
+          <ul>
+            <li>
+              <strong>Web Development:</strong> Proficient in HTML & CSS, with
+              hands-on experience in cloning real-world projects.
+            </li>
+            <li>
+              <strong>Data Structures & Algorithms:</strong> Learning from
+              Striver’s A2Z DSA Sheet to strengthen problem-solving abilities.
+            </li>
+            <li>
+              <strong>Competitive Programming:</strong> Participated in coding
+              contests, enhancing logical thinking and coding speed.
+            </li>
+            <li>
+              <strong>Project Development:</strong> Experience in hackathons,
+              working on innovative solutions like <i>MediQueue</i> and
+              <i>Complaint Express</i>.
+            </li>
+            <li>
+              <strong>Communication & Networking:</strong> Passionate about
+              connecting with like-minded individuals and improving communication
+              skills.
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
